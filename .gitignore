@@ -1,5 +1,7 @@
 # 忽略包含敏感令牌的文件
 我的github令牌.md
+upload_r2.py
 *.token
 *.key
 .env
+
