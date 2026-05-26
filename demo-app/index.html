@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>极客工具箱 - Developer Utility Suite</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-glow"></div>
+    <div class="container">
+        <header>
+            <div class="logo">🚀 GEEKBOX</div>
+            <h1>开发者日常效率工具箱</h1>
+            <p class="subtitle">由 Antigravity AI 自动生成并提交至 GitHub 仓库</p>
+        </header>
+
+        <main class="grid">
+            <!-- Base64 Tool -->
+            <section class="card" id="base64-card">
+                <div class="card-header">
+                    <h2>Base64 编解码</h2>
+                    <span class="badge">Text</span>
+                </div>
+                <div class="card-body">
+                    <textarea id="base64-input" placeholder="输入需要编码或解码的文本..."></textarea>
+                    <div class="button-group">
+                        <button onclick="encodeBase64()" class="btn btn-primary">编码 (Encode)</button>
+                        <button onclick="decodeBase64()" class="btn btn-secondary">解码 (Decode)</button>
+                    </div>
+                    <textarea id="base64-output" readonly placeholder="输出结果..."></textarea>
+                </div>
+            </section>
+
+            <!-- Unix Timestamp Tool -->
+            <section class="card" id="timestamp-card">
+                <div class="card-header">
+                    <h2>时间戳转换</h2>
+                    <span class="badge">Time</span>
+                </div>
+                <div class="card-body">
+                    <div class="time-now">
+                        <span>当前时间戳:</span>
+                        <code id="current-timestamp">加载中...</code>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" id="timestamp-input" placeholder="时间戳 (秒) 或 时间字符串">
+                        <button onclick="convertTimestamp()" class="btn btn-primary">转换</button>
+                    </div>
+                    <div class="result-box">
+                        <p>结果: <strong id="timestamp-result">-</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- JSON Formatter Tool -->
+            <section class="card full-width" id="json-card">
+                <div class="card-header">
+                    <h2>JSON 格式化 & 美化</h2>
+                    <span class="badge">JSON</span>
+                </div>
+                <div class="card-body">
+                    <textarea id="json-input" class="code-font" placeholder="粘贴未格式化的 JSON 字符串..."></textarea>
+                    <div class="button-group">
+                        <button onclick="formatJSON()" class="btn btn-primary">美化 JSON</button>
+                        <button onclick="minifyJSON()" class="btn btn-secondary">压缩 JSON</button>
+                        <button onclick="clearJSON()" class="btn btn-danger">清空</button>
+                    </div>
+                    <div id="json-error" class="error-msg"></div>
+                    <pre><code id="json-output" class="code-font"></code></pre>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>GitHub Repository: <a href="https://github.com/Alanchowkk/testrepository" target="_blank">Alanchowkk/testrepository</a></p>
+        </footer>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
