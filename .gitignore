@@ -1,7 +1,7 @@
 # 忽略包含敏感令牌的文件
 我的github令牌.md
 upload_r2.py
+AI_AGENT_PUBLISH_GUIDE.md
 *.token
 *.key
 .env
-
